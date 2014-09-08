@@ -1,1 +1,81 @@
 @import url('reset.css');
+
+body{
+	background-color:gainsboro;
+}
+
+.background{
+	width:927px;
+	height:600px;
+	background-image:url(images/door927x600-2.jpg);
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+}
+
+.spacer1{
+	height:600px;
+	width:187px;
+/*	background-color:rgba(0,255,255,0.3);*/
+	float:left;
+}
+
+.door{
+	height:600px;
+	width:195px;
+/*	background-color:rgba(255,0,255,0.3);*/
+	float:left;
+}
+
+.spacer2{
+	height:600px;
+	width:120px;
+/*	background-color:rgba(255,255,0,0.3);*/
+	float:left;
+}
+
+.choices{
+	height:600px;
+	width:400px;
+/*	background-color:rgba(0,255,0,0.3);*/
+	float:left;
+}
+
+.doortext{
+	height:365px;
+	width:185px;
+/*	background-color:rgba(255,0,255,0.5);*/
+	margin-top:65px;
+	margin-left:5px;
+}
+
+.choice{
+	height:75px;
+	width:380px;
+	margin-left:10px;
+	margin-top:30px;
+	background-image:url(images/c1.jpg);
+/*	background-color:rgba(0,255,0,0.5);*/
+}
+
+.choice:hover{
+	background-image:url(images/c.gif);
+}
+
+.choice1{
+	margin-top:80px;
+}
+
+.choice4{
+	display:none;
+}
+
+
+
+.hide{
+	display:none;
+}
+
+.show{
+	display:block;
+}
