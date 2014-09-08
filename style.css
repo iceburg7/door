@@ -42,18 +42,26 @@ body{
 }
 
 .doortext{
-	height:365px;
-	width:185px;
+	height:325px;
+	width:145px;
 /*	background-color:rgba(255,0,255,0.5);*/
 	margin-top:65px;
 	margin-left:5px;
+	text-align:center;
+	padding:20px;
+	font-size:1.2em;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 .choice{
-	height:75px;
+	height:60px;
 	width:380px;
 	margin-left:10px;
 	margin-top:30px;
+	text-align:center;
+	padding-top:15px;
+	font-size:1.2em;
+	font-family: Helvetica, Arial, sans-serif;
 	background-image:url(images/c1.jpg);
 /*	background-color:rgba(0,255,0,0.5);*/
 }
