@@ -7,9 +7,10 @@ $(document).ready(function(){
 	//each screen and conversation point has different x
 	//define x, and set it at 0, the starting location.
 	var x = "start";
-	
 	console.log(x);
 	
+	//define a variable for the reloading scenario later on.
+	var hasReloaded = 0;
 	
 	
 	
@@ -75,8 +76,8 @@ $(document).ready(function(){
 			$(".choice3").append("<p>So.  A choice.</p>");
 			
 			click1("door1");
-			click2("game1");
-			click3("choice1");	
+			click2("game1");	//open
+			click3("choice1");	//open
 		}
 		
 		if(x==="door1"){
@@ -87,8 +88,8 @@ $(document).ready(function(){
 			$(".choice3").append("<p>And what would be behind the door?</p>");
 			
 			click1("door2");
-			click2("past1");
-			click3("behind1");	
+			click2("past1");	//open
+			click3("behind1");	//open
 		}
 		
 		if(x==="door2"){
@@ -141,15 +142,145 @@ $(document).ready(function(){
 		
 		if(x==="door6"){
 			//So you don't actually know anything about what is behind this door.
-			$(".doortext").append("<p>Whatever is behind this door depends more on you than on me.  I can say that you are the only one who will never open the door.</p>");
-			$(".choice1").append("<p>So you don't actually know anything about what is behind this door.</p>");
-			$(".choice2").append("<p></p>");
+			$(".doortext").append("<p>Whatever is behind this door depends more on you than on me.  What I do know is that you are the only one who will never be able to open this door.</p>");
+			$(".choice1").append("<p>Then what is the point of my being here?</p>");
+			$(".choice2").append("<p>I could just reload the page and end up somewhere else.</p>");
 			$(".choice3").append("<p></p>");
 			
 			click1("door7");
-			click2("");
-			click3("");	
+			click2("reload1");
+			click3("door6");	
 		}
+		
+		if(x==="reload1"){
+			//I could just reload the page and end up somewhere else.
+			$(".doortext").append("<p>You can absolutely do that.  And you can end up right back here again.</p>");
+			$(".choice1").append("<p>I'll see you soon, then.</p>");
+			$(".choice2").append("<p>I don't even have to reload, do I?</p>");
+			$(".choice3").append("<p></p>");
+			
+			hasReloaded = 1;
+			
+			click1("start");
+			click2("start");
+			click3("reload1");	
+		}
+		
+		if(x==="door7"){
+			//Then what is the point of my being here?
+			$(".doortext").append("<p>This is one of the possible outcomes of our talk, right?  That's what I'm here for - to show all of the possible outcomes.</p>");
+			$(".choice1").append("<p>So am I supposed to find all of the outcomes, or should I stick with the first one that I get?</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("should1");
+			click2("door7");
+			click3("door7");
+		}
+		
+		if(x==="should1"){
+			//So am I supposed to find all of the outcomes, or should I stick with the first one that I get?
+			$(".doortext").append("<p>You already know that there is no such thing as 'should' and 'shouldn't'.  For all I know, this is your twentieth time having this conversation.</p>");
+			$(".choice1").append("<p>For all I know, you know exactly how many times we've had this conversation.</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("should2");
+			click2("should1");
+			click3("should1");
+		}
+		
+		if(x==="should2"){
+			//For all I know, you know exactly how many times we've had this conversation.
+			$(".doortext").append("<p>That is true.  I could be storing everything in your browser.  Even if I'm not doing it now, I could start at any point in the future.  I could surprise you.</p>");
+			$(".choice1").append("<p></p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("should2");	//dead end
+			click2("should2");
+			click3("should2");
+		}
+		
+		
+		
+		
+		
+		if(x==="game1"){
+			//So.  A game.
+			$(".doortext").append("<p>That's right.  This is a point-and-click adventure of sorts.</p>");
+			$(".choice1").append("<p>I would appreciate your defining a 'Point-And-Click-Adventure'.</p>");
+			$(".choice2").append("<p>Is it really?  So are there any screens besides this one?</p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("define1");
+			click2("screen1");
+			click3("game1");
+		}
+		
+		if(x==="define1"){
+			//I would appreciate your defining a 'Point-And-Click-Adventure'.
+			$(".doortext").append("<p>It is a game where you move around space -- represented by  two-dimensional images -- by clicking around the screen.  It is usually puzzle-based, but this game isn't.</p>");
+			$(".choice1").append("<p>So what is this game based on?</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("define2");
+			click2("define1");
+			click3("define1");
+		}
+		
+		if(x==="define2"){
+			//So what is this game based on?
+			$(".doortext").append("<p>This game is about choices.  Think of it as a maze with many exits.  The exit is through this door, but where you end up depends on which path you take.</p>");
+			$(".choice1").append("<p>Is one of the exits the best one?  Is there something I am supposed to find here?</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("define3");
+			click2("define2");
+			click3("define2");
+		}
+		
+		if(x==="define3"){
+			//Is one of the exits the best one?  Is there something I am supposed to find here?
+			$(".doortext").append("<p>No.  This place is actually for me as much as it is for you.  It's a way for me to organize my thoughts.</p>");
+			$(".choice1").append("<p></p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("define3");	//dead end
+			click2("define3");
+			click3("define3");
+		}
+		
+		
+		
+		if(x==="screen1"){
+			//Is it really?  So are there any screens besides this one?
+			$(".doortext").append("<p>Technically, at the time of writing this, there is only one screen.  But I fully intend for there to be something on the other side of this door.  You'll find out soon enough whether that has happened yet.</p>");
+			$(".choice1").append("<p>What do I need to do to get to the other side?</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("screen2");
+			click2("screen1");
+			click3("screen1");
+		}
+		
+		if(x==="screen2"){
+			//What do I need to do to get to the other side?
+			$(".doortext").append("<p>Oh, just keep going.  You'll get there soon enough.</p>");
+			$(".choice1").append("<p></p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("screen2");
+			click2("screen2");
+			click3("screen2");
+		}
+		
+		
 	
 	
 	
