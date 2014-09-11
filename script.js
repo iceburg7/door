@@ -271,13 +271,25 @@ $(document).ready(function(){
 		if(x==="screen2"){
 			//What do I need to do to get to the other side?
 			$(".doortext").append("<p>Oh, just keep going.  You'll get there soon enough.</p>");
-			$(".choice1").append("<p></p>");
+			$(".choice1").append("<p>Can I go through now?</p>");
 			$(".choice2").append("<p></p>");
 			$(".choice3").append("<p></p>");
 			
-			click1("screen2");
+			click1("screen3");
 			click2("screen2");
 			click3("screen2");
+		}
+		
+		if(x==="screen3"){
+			//What do I need to do to get to the other side?
+			$(".doortext").append("<p>Of course.</p>");
+			$(".choice1").append("<p>[Open the Door]</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("end1");		//Needs Ending.
+			click2("screen3");
+			click3("screen3");
 		}
 		
 		
