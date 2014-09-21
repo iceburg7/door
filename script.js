@@ -245,14 +245,52 @@ $(document).ready(function(){
 		if(x==="define3"){
 			//Is one of the exits the best one?  Is there something I am supposed to find here?
 			$(".doortext").append("<p>No.  This place is actually for me as much as it is for you.  It's a way for me to organize my thoughts.</p>");
+			$(".choice1").append("<p>Give me an example.  Tell me what you're thinking about.</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("define4");
+			click2("define3");
+			click3("define3");
+		}
+		
+		if(x==="define4"){
+			//Give me an example.  Tell me what you're thinking about.
+			$(".doortext").append("<p>Well, first of all do you know what I would mean if I were to talk about the general questions of architecture?</p>");
+			$(".choice1").append("<p>Yes.</p>");
+			$(".choice2").append("<p>No - what do you mean?</p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("define5");	
+			click2("define6");
+			click3("define4");
+		}
+		
+		if(x==="define5"){
+			//Yes.
+			$(".doortext").append("<p>Come on now, don't make this easy for me.  Ask me what I mean.  To be honest, I'm not really sure myself, but this is a good place to start.</p>");
+			$(".choice1").append("<p>Yes.</p>");
+			$(".choice2").append("<p>No - what do you mean?</p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("define5");	
+			click2("define6");
+			click3("define5");
+		}
+		
+		if(x==="define6"){
+			//No - what do you mean?
+			$(".doortext").append("<p>I guess I would start with all of the questions that I've been asked here at school.  Starting at the beginning with architecture as a theatrical act.</p>");
 			$(".choice1").append("<p></p>");
 			$(".choice2").append("<p></p>");
 			$(".choice3").append("<p></p>");
 			
-			click1("define3");	//dead end
-			click2("define3");
-			click3("define3");
+			click1("define6");	
+			click2("define6");
+			click3("define6");
 		}
+		
+		
 		
 		
 		
@@ -281,7 +319,7 @@ $(document).ready(function(){
 		}
 		
 		if(x==="screen3"){
-			//What do I need to do to get to the other side?
+			//Can I go through now?
 			$(".doortext").append("<p>Of course.</p>");
 			$(".choice1").append("<p>[Open the Door]</p>");
 			$(".choice2").append("<p></p>");
