@@ -281,13 +281,25 @@ $(document).ready(function(){
 		if(x==="define6"){
 			//No - what do you mean?
 			$(".doortext").append("<p>I guess I would start with all of the questions that I've been asked here at school.  Starting at the beginning with architecture as a theatrical act.</p>");
-			$(".choice1").append("<p></p>");
+			$(".choice1").append("<p>...</p>");
 			$(".choice2").append("<p></p>");
 			$(".choice3").append("<p></p>");
 			
-			click1("define6");	
+			click1("questions1");	
 			click2("define6");
 			click3("define6");
+		}
+		
+		if(x==="questions1"){
+			//...
+			$(".doortext").append("<p>And with the idea of drawing as architectural thought.  The really important moments are within the questions that don't have answers, at least not until you draw them.</p>");
+			$(".choice1").append("<p>...</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("questions2");	
+			click2("questions1");
+			click3("questions1");
 		}
 		
 		
