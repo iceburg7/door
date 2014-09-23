@@ -302,6 +302,42 @@ $(document).ready(function(){
 			click3("questions1");
 		}
 		
+		if(x==="questions2"){
+			//...
+			$(".doortext").append("<p>Then moving on to the rather uplifting concept of ideal spaces.  Ideal houses.</p>");
+			$(".choice1").append("<p>...</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("questions3");	
+			click2("questions2");
+			click3("questions2");
+		}
+		
+		if(x==="questions3"){
+			//...
+			$(".doortext").append("<p>And then jumping right into iteration - thinking through work.  Building a series of conceptual steps for a project.</p>");
+			$(".choice1").append("<p>...</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("questions4");	
+			click2("questions3");
+			click3("questions3");
+		}
+		
+		if(x==="questions4"){
+			//...
+			$(".doortext").append("<p>And then jumping right into iteration - thinking through work.  Building a series of conceptual steps for a project.</p>");
+			$(".choice1").append("<p>...</p>");
+			$(".choice2").append("<p></p>");
+			$(".choice3").append("<p></p>");
+			
+			click1("questions5");	
+			click2("questions4");
+			click3("questions4");
+		}
+		
 		
 		
 		
